@@ -90,7 +90,7 @@ def convert(md: str) -> str:
 
 
 def page(title: str, body: str, back: bool = True) -> str:
-    link = '<a class="back" href="./">&larr; Ironlog</a>' if back else ""
+    link = '<a class="back" href="./">&larr; Everset</a>' if back else ""
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -103,7 +103,7 @@ def page(title: str, body: str, back: bool = True) -> str:
 <main>
 {body}
 {link}
-<footer>Ironlog — a training log for Android. Contact: <a href="mailto:aklavya.mishra123@gmail.com">aklavya.mishra123@gmail.com</a></footer>
+<footer>Everset — a training log for Android. Contact: <a href="mailto:aklavya.mishra123@gmail.com">aklavya.mishra123@gmail.com</a></footer>
 </main>
 </body>
 </html>
@@ -111,5 +111,5 @@ def page(title: str, body: str, back: bool = True) -> str:
 
 
 md = SRC.read_text(encoding="utf-8")
-pathlib.Path("privacy.html").write_text(page("Privacy Policy — Ironlog", convert(md)), encoding="utf-8")
+pathlib.Path("privacy.html").write_text(page("Privacy Policy — Everset", convert(md)), encoding="utf-8")
 print("privacy.html", len(md), "chars of markdown converted")
